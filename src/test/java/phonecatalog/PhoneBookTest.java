@@ -3,6 +3,7 @@ package phonecatalog;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
+import org.mockito.Mockito;
 
 public class PhoneBookTest {
 
@@ -11,8 +12,8 @@ public class PhoneBookTest {
     public void addTest() {
         final PhoneBook book = new PhoneBook();
 
-        Assertions.assertEquals(true,  book.add(79215554849L, "Roman"), "Тест не проходит");
-        Assertions.assertNotNull(book.add(79215554849L, "Roman"));
+        Assertions.assertEquals(true,  book.add(79215554849L, Mockito.anyString()), "Тест на равенство не проходит");
+        Assertions.assertNotNull(book.add(79215554849L, Mockito.anyString()), "Тест на Null не проходит");
     }
 
 }
