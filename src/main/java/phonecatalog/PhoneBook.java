@@ -1,0 +1,5 @@
+package phonecatalog;
+
+class PhoneBook {
+
+}
