@@ -1,6 +1,7 @@
 package phonecatalog;
 
 import java.util.Map;
+import java.util.Set;
 import java.util.TreeMap;
 
 class PhoneBook {
@@ -31,5 +32,9 @@ class PhoneBook {
             return subscriberCatalog.get(name);
         }
         return -1;
+    }
+
+    public String printAllNames() {
+        return null;
     }
 }

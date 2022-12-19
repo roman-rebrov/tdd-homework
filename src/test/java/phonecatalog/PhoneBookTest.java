@@ -5,6 +5,8 @@ import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mockito;
 
+
+
 public class PhoneBookTest {
 
     @Test
@@ -39,6 +41,20 @@ public class PhoneBookTest {
         long result = book.findByName(name);
 
         Assertions.assertEquals(number, result);
+    }
+
+    @Test
+    @DisplayName("Test for printing all names")
+    public void printAllNamesTest() {
+        final PhoneBook book = new PhoneBook();
+        book.add(79215554849L, "c");
+        book.add(79215554848L, "b");
+        book.add(79215554845L, "a");
+
+        final String result = book.printAllNames();
+
+        Assertions.assertNotNull(result, "Тест на Null не проходит");
+
     }
 
 }
