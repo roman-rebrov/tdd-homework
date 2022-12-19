@@ -18,4 +18,9 @@ class PhoneBook {
 
         return true;
     }
+
+    public String findByNumber(long number) {
+
+        return null;
+    }
 }
