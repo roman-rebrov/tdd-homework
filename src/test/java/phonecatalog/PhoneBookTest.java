@@ -20,9 +20,12 @@ public class PhoneBookTest {
     @DisplayName("Test for finding subscriber by number")
     public void findByNumberTest() {
         final PhoneBook book = new PhoneBook();
+        book.add(79215554849L, Mockito.anyString());
 
-        Assertions.assertNotNull(book.findByNumber(79215554849L), "Тест на Null не проходит");
-
+        String result = book.findByNumber(79215554849L);
+        
+        Assertions.assertNotNull(result, "Тест на Null не проходит");
+        Assertions.assertInstanceOf(String.class, result);
     }
 
 }

@@ -20,6 +20,9 @@ class PhoneBook {
     }
 
     public String findByNumber(long number) {
+        if (this.numberCatalog.containsKey(number)){
+            return this.numberCatalog.get(number);
+        }
 
         return null;
     }
