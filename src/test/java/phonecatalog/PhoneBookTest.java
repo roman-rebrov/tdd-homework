@@ -53,8 +53,9 @@ public class PhoneBookTest {
 
         final String result = book.printAllNames();
 
-        Assertions.assertNotNull(result, "Тест на Null не проходит");
 
+        Assertions.assertNotNull(result, "Тест на Null не проходит");
+        Assertions.assertEquals("[a, b, c]", result);
     }
 
 }

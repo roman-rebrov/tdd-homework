@@ -35,6 +35,9 @@ class PhoneBook {
     }
 
     public String printAllNames() {
+        if (!subscriberCatalog.isEmpty()) {
+            return subscriberCatalog.keySet().toString();
+        }
         return null;
     }
 }
