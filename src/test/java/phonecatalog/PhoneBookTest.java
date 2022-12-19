@@ -23,9 +23,22 @@ public class PhoneBookTest {
         book.add(79215554849L, Mockito.anyString());
 
         String result = book.findByNumber(79215554849L);
-        
+
         Assertions.assertNotNull(result, "Тест на Null не проходит");
         Assertions.assertInstanceOf(String.class, result);
+    }
+
+    @Test
+    @DisplayName("Test for finding number of subscriber by name")
+    public void findByNameTest() {
+        final PhoneBook book = new PhoneBook();
+        final String name = "Roman";
+        final long number = 79215554849L;
+        book.add(number, name);
+
+        long result = book.findByName(name);
+
+        Assertions.assertEquals(number, result);
     }
 
 }

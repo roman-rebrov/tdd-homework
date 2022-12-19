@@ -23,7 +23,10 @@ class PhoneBook {
         if (this.numberCatalog.containsKey(number)){
             return this.numberCatalog.get(number);
         }
-
         return null;
+    }
+
+    public long findByName(String name) {
+        return -1;
     }
 }
