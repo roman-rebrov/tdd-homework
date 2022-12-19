@@ -27,6 +27,9 @@ class PhoneBook {
     }
 
     public long findByName(String name) {
+        if (subscriberCatalog.containsKey(name)){
+            return subscriberCatalog.get(name);
+        }
         return -1;
     }
 }
